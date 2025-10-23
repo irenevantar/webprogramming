@@ -73,7 +73,7 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null)
 
   const images = [
-    './assets/images/reze-poster.jpg',
+    '/assets/images/reze-poster.jpg',
     null,
     null,
   ]

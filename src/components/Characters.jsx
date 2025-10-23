@@ -334,25 +334,25 @@ const Characters = () => {
       name: '덴지',
       role: '체인소 맨',
       description: '체인소의 악마 포치타와 계약한 소년. 평범한 일상을 꿈꾸지만, 데빌 헌터로서의 운명과 레제와의 만남이 그의 세계를 뒤흔든다.',
-      image: './assets/images/denji.png',
+      image: '/assets/images/denji.png',
     },
     {
       name: '레제',
       role: '폭탄의 악마',
       description: '카페에서 일하는 수수께끼의 소녀. 순수한 미소 뒤에 숨겨진 진실과 덴지를 향한 복잡한 감정이 여름의 폭풍을 예고한다.',
-      image: './assets/images/reze.png',
+      image: '/assets/images/reze.png',
     },
     {
       name: '마키마',
       role: '공안 대마 특이4과 리더',
       description: '덴지의 상사이자 보호자. 완벽한 미소와 절대적인 카리스마로 모든 것을 통제하는 그녀의 진정한 목적은 무엇인가.',
-      image: './assets/images/makima.png',
+      image: '/assets/images/makima.png',
     },
     {
       name: '아키',
       role: '데빌 헌터',
       description: '냉정하고 진지한 선배 헌터. 복수를 위해 살아가지만, 덴지와 파워와의 동거 생활이 그의 마음을 조금씩 녹인다.',
-      image: './assets/images/aki.png',
+      image: '/assets/images/aki.png',
     },
   ]
 
