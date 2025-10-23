@@ -1,9 +1,9 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
-import rezePosterImg from '/public/assets/images/reze-poster.jpg'
-import rezePoster2Img from '/public/assets/images/reze-poster-2.jpg'
-import rezePoster3Img from '/public/assets/images/reze-poster-3.png'
+import rezePosterImg from '/assets/images/reze-poster.jpg'
+import rezePoster2Img from '/assets/images/reze-poster-2.jpg'
+import rezePoster3Img from '/assets/images/reze-poster-3.png'
 
 const GalleryItem = ({ index, image, onClick }) => {
   const ref = useRef(null)

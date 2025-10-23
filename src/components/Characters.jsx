@@ -6,10 +6,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import ScrollReveal from './ScrollReveal'
 
 // Import images
-import denjiImg from '/public/assets/images/denji.png'
-import rezeImg from '/public/assets/images/reze.png'
-import makimaImg from '/public/assets/images/makima.png'
-import akiImg from '/public/assets/images/aki.png'
+import denjiImg from '/assets/images/denji.png'
+import rezeImg from '/assets/images/reze.png'
+import makimaImg from '/assets/images/makima.png'
+import akiImg from '/assets/images/aki.png'
 
 gsap.registerPlugin(ScrollTrigger)
 
