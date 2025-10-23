@@ -2,14 +2,20 @@
 
 <div align="center">
 
-![Chainsaw Man](https://img.shields.io/badge/Chainsaw%20Man-Reze%20Arc-purple?style=for-the-badge)
-![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react)
-![Vite](https://img.shields.io/badge/Vite-5.4.21-646CFF?style=for-the-badge&logo=vite)
-![GSAP](https://img.shields.io/badge/GSAP-3.13.0-88CE02?style=for-the-badge&logo=greensock)
+[![Chainsaw Man](https://img.shields.io/badge/Chainsaw%20Man-Reze%20Arc-8b5cf6?style=for-the-badge)](https://irenevantar.github.io/webprogramming/)
+[![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-5.4.21-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![GSAP](https://img.shields.io/badge/GSAP-3.13.0-88CE02?style=for-the-badge&logo=greensock&logoColor=white)](https://greensock.com/gsap/)
 
-### 🌐 **[🔗 Live Demo](https://irenevantar.github.io/webprogramming/)**
+---
+
+## 🌐 **[🔗 사이트 바로가기](https://irenevantar.github.io/webprogramming/)**
 
 *체인소 맨 레제편 테마의 인터랙티브 웹사이트*
+
+---
+
+![Preview](https://raw.githubusercontent.com/irenevantar/webprogramming/main/public/assets/images/reze-poster.jpg)
 
 </div>
 
