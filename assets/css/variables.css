@@ -1,0 +1,65 @@
+/* CSS Variables - Design System */
+:root {
+  /* Colors - Chainsaw Man Theme */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #141414;
+  --bg-tertiary: #1a1a1a;
+  
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --text-muted: #666666;
+  
+  --accent-red: #ef4444;
+  --accent-orange: #f97316;
+  --accent-blood: #dc2626;
+  
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-glow: rgba(239, 68, 68, 0.3);
+  
+  /* Spacing */
+  --container-width: 1400px;
+  --container-padding: 2rem;
+  --section-padding: 8rem;
+  
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 3rem;
+  --font-size-5xl: 4rem;
+  --font-size-hero: clamp(4rem, 10vw, 8rem);
+  
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.6s ease;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 40px rgba(239, 68, 68, 0.3);
+  
+  /* Z-index layers */
+  --z-header: 1000;
+  --z-overlay: 500;
+  --z-content: 1;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 1.25rem;
+    --section-padding: 4rem;
+  }
+}

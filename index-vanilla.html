@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>체인소맨: 레제편 | REZE ARC</title>
+		<meta name="description" content="극장판 체인소맨: 레제편 - 폭발 같은 여름, 소년과 소녀의 이야기">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+		<link href="./assets/css/reset.css" rel="stylesheet" />
+		<link href="./assets/css/variables.css" rel="stylesheet" />
+		<link href="./assets/css/animations.css" rel="stylesheet" />
+		<link href="./assets/css/main.css" rel="stylesheet" />
+		<link href="./assets/css/hero.css" rel="stylesheet" />
+		<link href="./assets/css/characters.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!-- Navigation -->
+		<header class="header">
+			<div class="container">
+				<a class="logo" href="#hero">REZE ARC</a>
+				<nav class="nav">
+					<a href="#hero" class="nav-link">TOP</a>
+					<a href="#characters" class="nav-link">CHARACTERS</a>
+					<a href="#story" class="nav-link">STORY</a>
+					<a href="#gallery" class="nav-link">GALLERY</a>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<!-- Hero Section - Full Screen Poster -->
+			<section id="hero" class="hero-section">
+				<div class="hero-poster-wrapper">
+					<img src="./assets/images/reze-poster.jpg" 
+						 alt="체인소맨 레제편 극장판 포스터" 
+						 class="hero-poster-image"
+						 loading="eager">
+					<div class="hero-overlay"></div>
+				</div>
+				
+				<div class="hero-content">
+					<div class="hero-title-wrapper">
+						<h1 class="hero-title">
+							<span class="title-line" data-text="CHAINSAW MAN">CHAINSAW MAN</span>
+							<span class="title-line subtitle" data-text="REZE ARC">REZE ARC</span>
+						</h1>
+						<p class="hero-tagline">
+							<span class="typing-text" id="typingText"></span>
+							<span class="cursor">_</span>
+						</p>
+					</div>
+					
+					<div class="scroll-indicator">
+						<span class="scroll-text">SCROLL</span>
+						<svg class="scroll-arrow" width="24" height="24" viewBox="0 0 24 24">
+							<path d="M12 4L12 20M12 20L6 14M12 20L18 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+						</svg>
+					</div>
+				</div>
+			</section>
+
+					<section id="trailer" class="section reveal">
+						<div class="container">
+							<h2>Trailer</h2>
+							<p>공식 예고편 링크를 추가하세요. 지역별 예고편이 다를 수 있습니다.</p>
+							<div class="grid">
+								<div class="card">메인 예고편 링크/임베드</div>
+								<div class="card">30초 예고편</div>
+								<div class="card">엔딩곡 티저</div>
+							</div>
+						</div>
+					</section>
+
+			<!-- Characters Section -->
+			<section id="characters" class="characters-section">
+				<div class="container">
+					<h2 class="section-title reveal-text">
+						<span class="title-bracket">[</span>
+						CHARACTERS
+						<span class="title-bracket">]</span>
+					</h2>
+					
+					<div class="characters-grid">
+						<!-- Character 1: Denji -->
+						<div class="character-card" data-character="denji">
+							<div class="character-number">01</div>
+							<div class="character-content">
+								<div class="character-icon">
+									<svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+										<circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="2"/>
+										<path d="M30 10 L30 50 M15 30 L45 30" stroke="currentColor" stroke-width="3"/>
+									</svg>
+								</div>
+								<h3 class="character-name">덴지 / DENJI</h3>
+								<p class="character-role">체인소 맨</p>
+								<p class="character-description">
+									체인소의 악마 포치타와 계약한 소년. 평범한 일상을 꿈꾸지만, 
+									데빌 헌터로서의 운명과 레제와의 만남이 그의 세계를 뒤흔든다.
+								</p>
+							</div>
+							<div class="character-line"></div>
+						</div>
+
+						<!-- Character 2: Reze -->
+						<div class="character-card" data-character="reze">
+							<div class="character-number">02</div>
+							<div class="character-content">
+								<div class="character-icon">
+									<svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+										<circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="2"/>
+										<path d="M20 25 L30 35 L40 20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+									</svg>
+								</div>
+								<h3 class="character-name">레제 / REZE</h3>
+								<p class="character-role">폭탄의 악마</p>
+								<p class="character-description">
+									카페에서 일하는 수수께끼의 소녀. 순수한 미소 뒤에 숨겨진 진실과 
+									덴지를 향한 복잡한 감정이 여름의 폭풍을 예고한다.
+								</p>
+							</div>
+							<div class="character-line"></div>
+						</div>
+
+						<!-- Character 3: Makima -->
+						<div class="character-card" data-character="makima">
+							<div class="character-number">03</div>
+							<div class="character-content">
+								<div class="character-icon">
+									<svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+										<circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="2"/>
+										<circle cx="30" cy="30" r="15" stroke="currentColor" stroke-width="2"/>
+										<circle cx="30" cy="30" r="5" fill="currentColor"/>
+									</svg>
+								</div>
+								<h3 class="character-name">마키마 / MAKIMA</h3>
+								<p class="character-role">공안 대마 특이4과 리더</p>
+								<p class="character-description">
+									덴지의 상사이자 보호자. 완벽한 미소와 절대적인 카리스마로 
+									모든 것을 통제하는 그녀의 진정한 목적은 무엇인가.
+								</p>
+							</div>
+							<div class="character-line"></div>
+						</div>
+
+						<!-- Character 4: Aki -->
+						<div class="character-card" data-character="aki">
+							<div class="character-number">04</div>
+							<div class="character-content">
+								<div class="character-icon">
+									<svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+										<circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="2"/>
+										<path d="M30 15 L30 45 M20 25 L30 15 L40 25" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+									</svg>
+								</div>
+								<h3 class="character-name">아키 / AKI</h3>
+								<p class="character-role">데빌 헌터</p>
+								<p class="character-description">
+									냉정하고 진지한 선배 헌터. 복수를 위해 살아가지만, 
+									덴지와 파워와의 동거 생활이 그의 마음을 조금씩 녹인다.
+								</p>
+							</div>
+							<div class="character-line"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Story Section -->
+			<section id="story" class="story-section">
+				<div class="container">
+					<h2 class="section-title reveal-text">
+						<span class="title-bracket">[</span>
+						STORY
+						<span class="title-bracket">]</span>
+					</h2>
+					
+					<div class="story-content">
+						<div class="story-panel reveal-panel">
+							<div class="panel-header">
+								<span class="panel-label">CHAPTER_01</span>
+								<span class="panel-divider">//</span>
+								<span class="panel-title">여름의 시작</span>
+							</div>
+							<p class="panel-text">
+								데블 헌터로 살아가는 소년 덴지. 평범한 일상을 꿈꾸던 그에게 
+								어느 여름날 카페에서 일하는 소녀 레제가 나타난다. 
+								비를 피하며 시작된 만남은 소박하지만 빛나는 순간들로 채워진다.
+							</p>
+						</div>
+
+						<div class="story-panel reveal-panel">
+							<div class="panel-header">
+								<span class="panel-label">CHAPTER_02</span>
+								<span class="panel-divider">//</span>
+								<span class="panel-title">숨겨진 진실</span>
+							</div>
+							<p class="panel-text">
+								하지만 레제의 미소 뒤에는 비밀이 있다. 
+								폭탄의 악마로서의 정체, 그리고 덴지를 노리는 진짜 이유. 
+								순수했던 만남은 점차 폭력과 배신의 소용돌이 속으로 빨려든다.
+							</p>
+						</div>
+
+						<div class="story-panel reveal-panel">
+							<div class="panel-header">
+								<span class="panel-label">CHAPTER_03</span>
+								<span class="panel-divider">//</span>
+								<span class="panel-title">폭발의 잔상</span>
+							</div>
+							<p class="panel-text">
+								진실이 드러나는 순간, 거리는 폭발로 뒤덮인다. 
+								서로를 향한 감정과 각자의 사명 사이에서 덴지와 레제는 
+								결국 싸워야 하는 운명에 놓인다. 폭발 속에서 남는 것은 무엇인가.
+							</p>
+						</div>
+
+						<div class="story-panel reveal-panel">
+							<div class="panel-header">
+								<span class="panel-label">EPILOGUE</span>
+								<span class="panel-divider">//</span>
+								<span class="panel-title">있는 그대로의 마음</span>
+							</div>
+							<p class="panel-text">
+								레제편은 체인소 맨의 거친 세계 속에서 
+								'있는 그대로의 마음'이 무엇인지 묻는다. 
+								사라져가는 여름, 그리고 영원히 남을 기억의 조각들.
+							</p>
+						</div>
+					</div>
+
+					<div class="story-credits">
+						<p>정보 참고: 나무위키 '극장판 체인소 맨: 레제편' (요약/재서술, 비상업적 참고)</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Gallery Section -->
+			<section id="gallery" class="gallery-section">
+				<div class="container">
+					<h2 class="section-title reveal-text">
+						<span class="title-bracket">[</span>
+						GALLERY
+						<span class="title-bracket">]</span>
+					</h2>
+					
+					<div class="gallery-grid">
+						<div class="gallery-item reveal">
+							<div class="gallery-placeholder">
+								<svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+									<rect x="10" y="10" width="60" height="60" stroke="currentColor" stroke-width="2"/>
+									<circle cx="30" cy="30" r="8" stroke="currentColor" stroke-width="2"/>
+									<path d="M10 60 L30 40 L50 55 L70 35 L70 70 L10 70 Z" fill="currentColor" opacity="0.3"/>
+								</svg>
+								<p>이미지를 추가하세요</p>
+							</div>
+						</div>
+						<div class="gallery-item reveal">
+							<div class="gallery-placeholder">
+								<svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+									<rect x="10" y="10" width="60" height="60" stroke="currentColor" stroke-width="2"/>
+									<circle cx="30" cy="30" r="8" stroke="currentColor" stroke-width="2"/>
+									<path d="M10 60 L30 40 L50 55 L70 35 L70 70 L10 70 Z" fill="currentColor" opacity="0.3"/>
+								</svg>
+								<p>이미지를 추가하세요</p>
+							</div>
+						</div>
+						<div class="gallery-item reveal">
+							<div class="gallery-placeholder">
+								<svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+									<rect x="10" y="10" width="60" height="60" stroke="currentColor" stroke-width="2"/>
+									<circle cx="30" cy="30" r="8" stroke="currentColor" stroke-width="2"/>
+									<path d="M10 60 L30 40 L50 55 L70 35 L70 70 L10 70 Z" fill="currentColor" opacity="0.3"/>
+								</svg>
+								<p>이미지를 추가하세요</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:space-between;align-items:center">
+					<span>© <span id="year"></span> CHAINSAW MAN: REZE ARC</span>
+					<span style="display:flex;gap:1rem">
+						<a href="https://github.com/irenevantar/Webprogramming">GitHub</a>
+						<a href="#hero">Back to Top</a>
+					</span>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Loading overlay -->
+		<div id="loader" class="loader" role="status" aria-live="assertive">
+			<div class="inner">
+				<svg width="56" height="56" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+					<path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke="#7dd3fc" stroke-width="1.5" stroke-linecap="round"/>
+				</svg>
+				<div id="progress" class="progress">LOADING - 0%</div>
+			</div>
+		</div>
+
+		<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+		<script src="./assets/js/typing.js"></script>
+		<script src="./assets/js/scroll.js"></script>
+		<script src="./assets/js/characters.js"></script>
+		<script src="./assets/js/main.js"></script>
+	</body>
+	</html>
