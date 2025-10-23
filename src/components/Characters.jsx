@@ -251,25 +251,24 @@ const CharacterSection = ({ character, index, isReversed }) => {
           </motion.p>
 
           {/* 설명 */}
-          <ScrollReveal
-            enableBlur={true}
-            baseOpacity={0.7}
-            baseRotation={1}
-            blurStrength={2}
-            className=""
+          <motion.p
+            style={{
+              fontSize: 'clamp(1.25rem, 2vw, 1.5rem)',
+              fontWeight: 400,
+              lineHeight: 1.9,
+              color: '#a78bfa',
+              maxWidth: '600px',
+            }}
           >
-            <motion.p
-              style={{
-                fontSize: 'clamp(1.25rem, 2vw, 1.5rem)',
-                fontWeight: 400,
-                lineHeight: 1.9,
-                color: '#a78bfa',
-                maxWidth: '600px',
-              }}
+            <ScrollReveal
+              enableBlur={true}
+              baseOpacity={0.7}
+              baseRotation={1}
+              blurStrength={2}
             >
               {character.description}
-            </motion.p>
-          </ScrollReveal>
+            </ScrollReveal>
+          </motion.p>
 
           {/* Decorative Line */}
           <motion.div
