@@ -253,9 +253,9 @@ const CharacterSection = ({ character, index, isReversed }) => {
           {/* 설명 */}
           <ScrollReveal
             enableBlur={true}
-            baseOpacity={0.2}
-            baseRotation={2}
-            blurStrength={3}
+            baseOpacity={0.7}
+            baseRotation={1}
+            blurStrength={2}
             className=""
           >
             <motion.p
