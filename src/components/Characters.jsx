@@ -98,8 +98,11 @@ const CharacterSection = ({ character, index, isReversed }) => {
               transition={{ duration: 0.3 }}
               style={{
                 position: 'relative',
-                width: '100%',
-                maxWidth: '500px',
+                width: '400px',
+                height: '550px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
               }}
             >
               <img
@@ -107,7 +110,7 @@ const CharacterSection = ({ character, index, isReversed }) => {
                 alt={character.name}
                 style={{
                   width: '100%',
-                  height: 'auto',
+                  height: '100%',
                   objectFit: 'contain',
                   filter: 'drop-shadow(0 0 40px rgba(94, 234, 212, 0.3))',
                 }}
@@ -231,8 +234,11 @@ const CharacterSection = ({ character, index, isReversed }) => {
               transition={{ duration: 0.3 }}
               style={{
                 position: 'relative',
-                width: '100%',
-                maxWidth: '500px',
+                width: '400px',
+                height: '550px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
               }}
             >
               <img
@@ -240,7 +246,7 @@ const CharacterSection = ({ character, index, isReversed }) => {
                 alt={character.name}
                 style={{
                   width: '100%',
-                  height: 'auto',
+                  height: '100%',
                   objectFit: 'contain',
                   filter: 'drop-shadow(0 0 40px rgba(196, 181, 253, 0.3))',
                 }}

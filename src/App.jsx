@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import Header from './components/Header'
 import Hero from './components/Hero'
 import Characters from './components/Characters'
 import Story from './components/Story'
 import Gallery from './components/Gallery'
 import Footer from './components/Footer'
 import Loader from './components/Loader'
+import SideNav from './components/SideNav'
 
 function App() {
   const [loading, setLoading] = useState(true)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
     // Simulate loading
@@ -32,9 +33,10 @@ function App() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <Header />
+          <SideNav isVisible={isScrolled} />
+          
           <main>
-            <Hero />
+            <Hero onScroll={setIsScrolled} />
             <Characters />
             <Story />
             <Gallery />
