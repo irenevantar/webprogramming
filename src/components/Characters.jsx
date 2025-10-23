@@ -3,6 +3,7 @@ import { useInView } from 'framer-motion'
 import { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import ScrollReveal from './ScrollReveal'
 
 // Import images
 import denjiImg from '/public/assets/images/denji.png'
@@ -250,17 +251,25 @@ const CharacterSection = ({ character, index, isReversed }) => {
           </motion.p>
 
           {/* 설명 */}
-          <motion.p
-            style={{
-              fontSize: '1.125rem',
-              fontWeight: 400,
-              lineHeight: 1.8,
-              color: '#a78bfa',
-              maxWidth: '600px',
-            }}
+          <ScrollReveal
+            enableBlur={true}
+            baseOpacity={0.2}
+            baseRotation={2}
+            blurStrength={3}
+            className=""
           >
-            {character.description}
-          </motion.p>
+            <motion.p
+              style={{
+                fontSize: 'clamp(1.25rem, 2vw, 1.5rem)',
+                fontWeight: 400,
+                lineHeight: 1.9,
+                color: '#a78bfa',
+                maxWidth: '600px',
+              }}
+            >
+              {character.description}
+            </motion.p>
+          </ScrollReveal>
 
           {/* Decorative Line */}
           <motion.div
