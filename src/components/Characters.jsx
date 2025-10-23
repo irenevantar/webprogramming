@@ -1,13 +1,69 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useEffect } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const CharacterSection = ({ character, index, isReversed }) => {
   const ref = useRef(null)
+  const imageRef = useRef(null)
+  const textRef = useRef(null)
   const isInView = useInView(ref, { 
     once: false,
     margin: '-20% 0px -20% 0px'
   })
+
+  useEffect(() => {
+    if (imageRef.current && textRef.current) {
+      // GSAP 애니메이션 설정
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ref.current,
+          start: 'top 80%',
+          end: 'top 20%',
+          toggleActions: 'play reverse play reverse',
+          scrub: 1,
+        }
+      })
+
+      tl.fromTo(
+        imageRef.current,
+        {
+          x: isReversed ? 100 : -100,
+          opacity: 0,
+          scale: 0.8,
+          rotateY: isReversed ? 15 : -15,
+        },
+        {
+          x: 0,
+          opacity: 1,
+          scale: 1,
+          rotateY: 0,
+          duration: 1,
+          ease: 'power3.out',
+        }
+      ).fromTo(
+        textRef.current,
+        {
+          x: isReversed ? -50 : 50,
+          opacity: 0,
+        },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: 'power2.out',
+        },
+        '-=0.5'
+      )
+    }
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
+    }
+  }, [isReversed])
 
   // 외부에서 안쪽으로 페이드인
   const fadeVariants = {
@@ -82,10 +138,8 @@ const CharacterSection = ({ character, index, isReversed }) => {
       >
         {/* 캐릭터 이미지 */}
         {!isReversed && (
-          <motion.div
-            variants={fadeVariants}
-            initial="hidden"
-            animate={isInView ? 'visible' : 'exit'}
+          <div
+            ref={imageRef}
             style={{
               position: 'relative',
               display: 'flex',
@@ -94,7 +148,7 @@ const CharacterSection = ({ character, index, isReversed }) => {
             }}
           >
             <motion.div
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, rotateY: 5 }}
               transition={{ duration: 0.3 }}
               style={{
                 position: 'relative',
@@ -103,6 +157,7 @@ const CharacterSection = ({ character, index, isReversed }) => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
+                perspective: '1000px',
               }}
             >
               <img
@@ -131,14 +186,12 @@ const CharacterSection = ({ character, index, isReversed }) => {
                 }}
               />
             </motion.div>
-          </motion.div>
+          </div>
         )}
 
         {/* 캐릭터 정보 */}
-        <motion.div
-          variants={textVariants}
-          initial="hidden"
-          animate={isInView ? 'visible' : 'exit'}
+        <div
+          ref={textRef}
           style={{
             display: 'flex',
             flexDirection: 'column',
@@ -214,14 +267,12 @@ const CharacterSection = ({ character, index, isReversed }) => {
               marginTop: '1rem',
             }}
           />
-        </motion.div>
+        </div>
 
         {/* 캐릭터 이미지 (역순일 때) */}
         {isReversed && (
-          <motion.div
-            variants={fadeVariants}
-            initial="hidden"
-            animate={isInView ? 'visible' : 'exit'}
+          <div
+            ref={imageRef}
             style={{
               position: 'relative',
               display: 'flex',
@@ -230,7 +281,7 @@ const CharacterSection = ({ character, index, isReversed }) => {
             }}
           >
             <motion.div
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, rotateY: -5 }}
               transition={{ duration: 0.3 }}
               style={{
                 position: 'relative',
@@ -239,6 +290,7 @@ const CharacterSection = ({ character, index, isReversed }) => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
+                perspective: '1000px',
               }}
             >
               <img
@@ -267,7 +319,7 @@ const CharacterSection = ({ character, index, isReversed }) => {
                 }}
               />
             </motion.div>
-          </motion.div>
+          </div>
         )}
       </div>
     </div>

@@ -38,10 +38,11 @@ const Hero = ({ onScroll }) => {
           height: '100%',
           overflow: 'hidden',
           zIndex: 0,
+          pointerEvents: 'none',
         }}
       >
         <iframe
-          src="https://www.youtube.com/embed/mWacdcatC9o?autoplay=1&mute=1&loop=1&playlist=mWacdcatC9o&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+          src="https://www.youtube.com/embed/mWacdcatC9o?autoplay=1&mute=1&loop=1&playlist=mWacdcatC9o&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&fs=0&iv_load_policy=3"
           title="Chainsaw Man Reze Arc Trailer"
           allow="autoplay; encrypted-media"
           style={{
@@ -57,9 +58,22 @@ const Hero = ({ onScroll }) => {
             pointerEvents: 'none',
           }}
         />
+        {/* 투명 오버레이로 YouTube UI 차단 */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'transparent',
+            pointerEvents: 'auto',
+            zIndex: 1,
+          }}
+        />
       </div>
 
-      {/* Dark Overlay */}
+      {/* 약간의 다크 오버레이 (밝기 유지) */}
       <div
         style={{
           position: 'absolute',
@@ -67,7 +81,7 @@ const Hero = ({ onScroll }) => {
           left: 0,
           width: '100%',
           height: '100%',
-          background: 'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%)',
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 100%)',
           zIndex: 1,
         }}
       />
