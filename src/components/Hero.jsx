@@ -73,32 +73,6 @@ const Hero = ({ onScroll }) => {
         />
       </div>
 
-      {/* 약간의 다크 오버레이 (밝기 유지) */}
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          background: 'linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 100%)',
-          zIndex: 1,
-        }}
-      />
-
-      {/* Dark Overlay */}
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          background: 'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%)',
-          zIndex: 1,
-        }}
-      />
-
       {/* Scroll Indicator - Only visible initially */}
       <motion.div
         initial={{ opacity: 0 }}
