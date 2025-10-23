@@ -15,34 +15,36 @@ const Hero = () => {
   useEffect(() => {
     let charIndex = 0
     let isDeleting = false
-    let currentText = texts[textIndex]
+    let timeout
 
     const type = () => {
+      const currentText = texts[textIndex]
+      
       if (isDeleting) {
         setText(currentText.substring(0, charIndex - 1))
         charIndex--
         if (charIndex === 0) {
           isDeleting = false
           setTextIndex((prev) => (prev + 1) % texts.length)
-          setTimeout(type, 500)
+          timeout = setTimeout(type, 500)
         } else {
-          setTimeout(type, 50)
+          timeout = setTimeout(type, 50)
         }
       } else {
         setText(currentText.substring(0, charIndex + 1))
         charIndex++
         if (charIndex === currentText.length) {
           isDeleting = true
-          setTimeout(type, 2000)
+          timeout = setTimeout(type, 2000)
         } else {
-          setTimeout(type, 100)
+          timeout = setTimeout(type, 100)
         }
       }
     }
 
-    const timer = setTimeout(type, 1000)
-    return () => clearTimeout(timer)
-  }, [textIndex])
+    timeout = setTimeout(type, 1000)
+    return () => clearTimeout(timeout)
+  }, [textIndex, texts])
 
   return (
     <section
@@ -154,7 +156,7 @@ const Hero = () => {
             style={{
               fontFamily: "'Space Mono', monospace",
               fontSize: 'clamp(1rem, 2vw, 1.5rem)',
-              fontWeight: 700,
+              fontWeight: 400,
               color: '#a78bfa',
               letterSpacing: '0.05em',
               minHeight: '2rem',

@@ -37,22 +37,76 @@ const Loader = () => {
       }}
     >
       <div style={{ textAlign: 'center' }}>
+        {/* Chainsaw Animation */}
         <motion.svg
-          width="56"
-          height="56"
-          viewBox="0 0 24 24"
+          width="120"
+          height="120"
+          viewBox="0 0 120 120"
           fill="none"
-          animate={{ rotate: 360 }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-          style={{ margin: '0 auto 1.5rem' }}
+          style={{ margin: '0 auto 2rem' }}
         >
-          <path
-            d="M12 2v4M12 18v4M2 12h4M18 12h4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"
-            stroke="#5eead4"
-            strokeWidth="1.5"
-            strokeLinecap="round"
+          {/* Chainsaw Body */}
+          <motion.rect
+            x="20"
+            y="50"
+            width="80"
+            height="20"
+            rx="4"
+            fill="#5eead4"
+            initial={{ opacity: 0.3 }}
+            animate={{ opacity: [0.3, 1, 0.3] }}
+            transition={{ duration: 1, repeat: Infinity }}
+          />
+          
+          {/* Chainsaw Handle */}
+          <motion.rect
+            x="15"
+            y="40"
+            width="15"
+            height="40"
+            rx="3"
+            fill="#c4b5fd"
+          />
+          
+          {/* Chainsaw Teeth */}
+          {[...Array(8)].map((_, i) => (
+            <motion.rect
+              key={i}
+              x={25 + i * 10}
+              y="48"
+              width="6"
+              height="6"
+              fill="#ffffff"
+              initial={{ y: 48 }}
+              animate={{ y: [48, 52, 48] }}
+              transition={{
+                duration: 0.3,
+                repeat: Infinity,
+                delay: i * 0.1,
+              }}
+            />
+          ))}
+          
+          {/* Spark Effect */}
+          <motion.circle
+            cx="100"
+            cy="60"
+            r="4"
+            fill="#5eead4"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{
+              opacity: [0, 1, 0],
+              scale: [0, 1.5, 0],
+              x: [0, 20, 0],
+            }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              repeatDelay: 0.5,
+            }}
           />
         </motion.svg>
+        
         <motion.div
           style={{
             fontFamily: "'Space Mono', monospace",
@@ -60,12 +114,48 @@ const Loader = () => {
             fontSize: '1.125rem',
             color: '#5eead4',
             letterSpacing: '0.1em',
+            marginTop: '1rem',
           }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          LOADING - {progress}%
+          CHAINSAW LOADING...
+        </motion.div>
+        
+        {/* Progress Bar */}
+        <div
+          style={{
+            width: '200px',
+            height: '4px',
+            background: 'rgba(94, 234, 212, 0.2)',
+            borderRadius: '2px',
+            margin: '1rem auto 0.5rem',
+            overflow: 'hidden',
+          }}
+        >
+          <motion.div
+            style={{
+              height: '100%',
+              background: 'linear-gradient(90deg, #5eead4, #c4b5fd)',
+              borderRadius: '2px',
+            }}
+            initial={{ width: '0%' }}
+            animate={{ width: `${progress}%` }}
+            transition={{ duration: 0.3 }}
+          />
+        </div>
+        
+        <motion.div
+          style={{
+            fontFamily: "'Space Mono', monospace",
+            fontWeight: 400,
+            fontSize: '0.875rem',
+            color: '#a78bfa',
+            letterSpacing: '0.1em',
+          }}
+        >
+          {progress}%
         </motion.div>
       </div>
     </motion.div>

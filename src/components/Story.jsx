@@ -35,7 +35,7 @@ const StoryPanel = ({ panel, index }) => {
           style={{
             fontFamily: "'Space Mono', monospace",
             fontSize: '0.875rem',
-            fontWeight: 700,
+            fontWeight: 400,
             color: '#5eead4',
             letterSpacing: '0.1em',
           }}
@@ -56,7 +56,7 @@ const StoryPanel = ({ panel, index }) => {
       <p
         style={{
           fontSize: '1rem',
-          fontWeight: 700,
+          fontWeight: 400,
           lineHeight: 1.8,
           color: '#a78bfa',
         }}

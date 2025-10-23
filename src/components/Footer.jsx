@@ -31,6 +31,7 @@ const Footer = () => {
             justifyContent: 'space-between',
             alignItems: 'center',
             fontSize: '0.875rem',
+            fontWeight: 400,
             color: '#a78bfa',
           }}
         >
