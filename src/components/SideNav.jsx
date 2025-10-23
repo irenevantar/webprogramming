@@ -108,19 +108,6 @@ const SideNav = ({ isVisible }) => {
           </motion.button>
         )
       })}
-
-      {/* Decorative Line */}
-      <motion.div
-        initial={{ scaleY: 0 }}
-        animate={{ scaleY: isVisible ? 1 : 0 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
-        style={{
-          width: '2px',
-          height: '100px',
-          background: 'linear-gradient(180deg, transparent, #5eead4, transparent)',
-          margin: '1rem auto',
-        }}
-      />
     </motion.nav>
   )
 }
