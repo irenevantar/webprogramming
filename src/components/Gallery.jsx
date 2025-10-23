@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
+import rezePosterImg from '/public/assets/images/reze-poster.jpg'
 
 const GalleryItem = ({ index, image, onClick }) => {
   const ref = useRef(null)
@@ -73,7 +74,7 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null)
 
   const images = [
-    '/assets/images/reze-poster.jpg',
+    rezePosterImg,
     null,
     null,
   ]

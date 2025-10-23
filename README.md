@@ -13,10 +13,6 @@
 
 *체인소 맨 레제편 테마의 인터랙티브 웹사이트*
 
----
-
-![Preview](https://raw.githubusercontent.com/irenevantar/webprogramming/main/public/assets/images/reze-poster.jpg)
-
 </div>
 
 ---
