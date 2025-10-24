@@ -2,6 +2,7 @@
   "name": "chainsaw-man-reze-arc",
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://irenevantar.github.io/webprogramming-project",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
