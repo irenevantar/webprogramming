@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Chainsaw Man](https://img.shields.io/badge/Chainsaw%20Man-Reze%20Arc-8b5cf6?style=for-the-badge)](https://irenevantar.github.io/webprogramming/)
+[![Chainsaw Man](https://img.shields.io/badge/Chainsaw%20Man-Reze%20Arc-8b5cf6?style=for-the-badge)](https://irenevantar.github.io/webprogramming-project/)
 [![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-5.4.21-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![GSAP](https://img.shields.io/badge/GSAP-3.13.0-88CE02?style=for-the-badge&logo=greensock&logoColor=white)](https://greensock.com/gsap/)
@@ -10,7 +10,7 @@
 
 ---
 
-## 🌐 **[🔗 Live Demo](https://irenevantar.github.io/webprogramming/)**
+## 🌐 **[🔗 Live Demo](https://irenevantar.github.io/webprogramming-project/)**
 
 *체인소 맨 레제편 극장판 티저를 테마로 한 시네마틱 인터랙티브 웹사이트*
 
@@ -92,8 +92,8 @@
 ### 1️⃣ 저장소 클론
 
 ```bash
-git clone https://github.com/irenevantar/webprogramming.git
-cd webprogramming
+git clone https://github.com/irenevantar/webprogramming-project.git
+cd webprogramming-project
 ```
 
 ### 2️⃣ 의존성 설치
@@ -262,7 +262,7 @@ font-size: clamp(1rem, 2vw, 1.125rem);
 
 ### 자동 배포
 - **플랫폼**: GitHub Pages
-- **URL**: https://irenevantar.github.io/webprogramming/
+- **URL**: https://irenevantar.github.io/webprogramming-project/
 - **트리거**: `main` 브랜치에 push 시 자동 배포
 - **워크플로우**: `.github/workflows/deploy.yml`
 
@@ -388,7 +388,7 @@ export default defineConfig({
 
 ## 🐛 알려진 이슈
 
-현재 알려진 이슈가 없습니다. 문제를 발견하셨다면 [Issues](https://github.com/irenevantar/webprogramming/issues)에 제보해주세요.
+현재 알려진 이슈가 없습니다. 문제를 발견하셨다면 [Issues](https://github.com/irenevantar/webprogramming-project/issues)에 제보해주세요.
 
 ---
 
@@ -407,7 +407,7 @@ export default defineConfig({
 
 **Irene Vantar**
 - GitHub: [@irenevantar](https://github.com/irenevantar)
-- Repository: [webprogramming](https://github.com/irenevantar/webprogramming)
+- Repository: [webprogramming-project](https://github.com/irenevantar/webprogramming-project)
 
 ---
 
