@@ -8,6 +8,6 @@ export default defineConfig({
     open: true,
     host: true
   },
-  base: '/webprogramming/',
+  base: '/webprogramming-project/',
   publicDir: 'public'
 })
